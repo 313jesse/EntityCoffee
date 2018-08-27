@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "ItemDetails";
+}
+
+@*// this page is responsible for showing data from the edit page*@
+
+<h2>ItemDetails</h2>
+
+<form action="/Home/SaveChanges" method="post">
+    <input type="hidden" name="itemID" value="@ViewBag.ItemToEdit.itemID"/>
+      <label>Item Name:</label><input type="text" name="name" class="form-control" value="@ViewBag.ItemToEdit.name"/>  @*//do not want to show this part to users*@
+    <label>Decription:</label> <input type="text" name="decription" class="form-control" value="@ViewBag.ItemToEdit.decription"/>
+    <label>Quantity:</label> <input type="number" min="1" max="20" name="quantity" class="form-control" value="@ViewBag.ItemToEdit.quantity"/>
+    <label>Price:</label> <input type="number" name="price" class="form-control" value="@ViewBag.ItemToEdit.price"/>
+<input type="submit" value="Save!" class="form-control"/>
+    </form>
+
+
+
+
+
+
+
